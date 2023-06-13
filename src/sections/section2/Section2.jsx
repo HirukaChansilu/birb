@@ -36,11 +36,29 @@ export default function Section2() {
             <h2>
               <span
                 className="fade-text"
-                style={{ opacity: `${100 - pagePercentage}%` }}
+                style={{
+                  opacity: `${pagePercentage > 80 ? 0 : 1}`,
+                  display: `${pagePercentage > 95 ? "none" : "inline-block"}`,
+                }}
               >
-                Meet the{" "}
+                Meet the
               </span>
-              <span className="gradient-text">Birb</span>
+              <span className="gradient-text birb-static">Birb</span>
+              <span
+                className="gradient-text birb-moving"
+                style={{ right: `${pagePercentage > 90 ? 68.3 : 0}%` }}
+              >
+                Birb
+              </span>
+              <span
+                className="fade-text anytime-text"
+                style={{
+                  display: `${pagePercentage < 95 ? "none" : "inline-block"}`,
+                  opacity: `${pagePercentage < 100 ? 0 : 1}`,
+                }}
+              >
+                Anytime
+              </span>
             </h2>
             <p style={{ opacity: `${100 - pagePercentage}%` }}>
               Your own Personal AI Powered Assistant with a huge potential to
@@ -50,7 +68,7 @@ export default function Section2() {
 
           <div
             className="iwatch-container"
-            style={{ left: `${pagePercentage}%` }}
+            style={{ left: `${50 + pagePercentage / 2}%` }}
           >
             <img
               src={iwatchfg}

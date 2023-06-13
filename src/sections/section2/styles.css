@@ -33,6 +33,8 @@
 .fade-text {
   font-weight: 500;
   opacity: 100%;
+
+  transition: all 1s ease-in;
 }
 
 .gradient-text {
@@ -127,7 +129,7 @@
 
 .iwatch-container {
   position: absolute;
-  top: 27%;
+  top: 26%;
   left: 0%;
 }
 
@@ -145,6 +147,24 @@
   z-index: 6;
 }
 
+.birb-static {
+  opacity: 0;
+}
+
+.birb-moving {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  transition: right 1s ease-out;
+}
+
+.anytime-text {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
 @media screen and (max-width: 1200px) {
   #sec-2 h2 {
     font-size: 8rem;
@@ -159,6 +179,12 @@
     font-size: 0.9rem;
     max-width: 26rem;
   }
+  .iwatch-container {
+    top: 32%;
+  }
+  .iwatch-container img {
+    height: 15rem;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -169,6 +195,12 @@
     font-size: 0.8rem;
     max-width: 24rem;
   }
+  .iwatch-container {
+    top: 36%;
+  }
+  .iwatch-container img {
+    height: 12rem;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -177,6 +209,12 @@
   }
   #sec-2 p {
     font-size: 0.8rem;
+  }
+  .iwatch-container {
+    top: 39%;
+  }
+  .iwatch-container img {
+    height: 8rem;
   }
 }
 
