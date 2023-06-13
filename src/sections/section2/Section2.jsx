@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import useObjectInView from "../../hooks/useObjectInView";
 
 import usePageExiting from "../../hooks/usePageExiting";
@@ -23,6 +23,30 @@ export default function Section2() {
   const containerVisible = useObjectInView(containerRef);
   const fixedPageState = usePageExiting(fixedPageRef);
   const pagePercentage = usePageScrollPercentage(percentageRef);
+  const showAnytime = usePageExiting(percentageRef);
+
+  useEffect(() => {
+    if (showAnytime) {
+      document.getElementById("anytime").style.opacity = 0;
+      setTimeout(() => {
+        document.getElementById("meet-the").style.display = "none";
+        document.getElementById("anytime").style.display = "inline-block";
+        setTimeout(() => {
+          document.getElementById("anytime").style.opacity = 1;
+        }, 100);
+      }, 300);
+    } else {
+      document.getElementById("meet-the").style.opacity = 0;
+
+      setTimeout(() => {
+        document.getElementById("meet-the").style.display = "inline-block";
+        document.getElementById("anytime").style.display = "none";
+        setTimeout(() => {
+          document.getElementById("meet-the").style.opacity = 1;
+        }, 100);
+      }, 300);
+    }
+  }, [showAnytime]);
 
   return (
     <>
@@ -37,25 +61,25 @@ export default function Section2() {
               <span
                 className="fade-text"
                 style={{
-                  opacity: `${pagePercentage > 80 ? 0 : 1}`,
-                  display: `${pagePercentage > 95 ? "none" : "inline-block"}`,
+                  opacity: showAnytime ? 0 : 1,
                 }}
+                id="meet-the"
               >
                 Meet the
               </span>
               <span className="gradient-text birb-static">Birb</span>
               <span
                 className="gradient-text birb-moving"
-                style={{ right: `${pagePercentage > 90 ? 68.3 : 0}%` }}
+                style={{ right: `${showAnytime ? 68.3 : 0}%` }}
               >
                 Birb
               </span>
               <span
                 className="fade-text anytime-text"
                 style={{
-                  display: `${pagePercentage < 95 ? "none" : "inline-block"}`,
-                  opacity: `${pagePercentage < 100 ? 0 : 1}`,
+                  opacity: showAnytime ? 1 : 0,
                 }}
+                id="anytime"
               >
                 Anytime
               </span>
@@ -68,7 +92,7 @@ export default function Section2() {
 
           <div
             className="iwatch-container"
-            style={{ left: `${50 + pagePercentage / 2}%` }}
+            style={{ left: `${40 + pagePercentage / 1.5}%` }}
           >
             <img
               src={iwatchfg}

@@ -32,9 +32,9 @@
 
 .fade-text {
   font-weight: 500;
-  opacity: 100%;
+  opacity: 1;
 
-  transition: all 1s ease-in;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .gradient-text {
@@ -136,7 +136,7 @@
 .iwatch-container img {
   opacity: 1;
   height: 20rem;
-  transform: translate(-20%, 0%);
+  transform: translate(-40%, 0%);
 }
 
 #ifw-0 {
@@ -162,7 +162,6 @@
 
 .anytime-text {
   opacity: 0;
-  transition: opacity 1s ease-in;
 }
 
 @media screen and (max-width: 1200px) {
