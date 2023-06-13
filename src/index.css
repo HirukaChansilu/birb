@@ -9,6 +9,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --dark-heading: #4b4b4b;
+  --dark-para: #8c8c8c;
 }
 
 ::-webkit-scrollbar {
@@ -30,15 +33,19 @@
   font-weight: 400;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
   position: relative;
   min-height: 100vh;
   width: 100%;
+  background-color: #fff;
 }
 
-section * {
-  position: relative;
-  z-index: 0;
+.dummy {
+  background-color: transparent;
 }
 
 .image-container {

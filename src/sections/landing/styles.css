@@ -1,5 +1,19 @@
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 #landing {
   overflow: hidden;
+
+  position: fixed;
+  inset: 0;
 }
 
 #landing .title-container,
@@ -19,6 +33,11 @@
   font-size: 30rem;
   font-weight: 600;
   color: #fff;
+
+  opacity: 0;
+  transform: translateY(20%);
+
+  animation: fade-up 1s ease-out 1s 1 forwards normal;
 }
 
 #landing .description-container {
@@ -27,10 +46,18 @@
 }
 
 #landing p {
+  position: relative;
+
   font-size: 1rem;
   color: #fff;
   text-align: center;
+  width: 90%;
+  max-width: 16rem;
   bottom: 5%;
+
+  opacity: 0;
+  transform: translateY(20%);
+  animation: fade-up 1s ease-out 2s 1 forwards normal;
 }
 
 @media screen and (max-width: 1400px) {
@@ -42,6 +69,10 @@
 @media screen and (max-width: 750px) {
   #landing h1 {
     font-size: 20rem;
+    rotate: -90deg;
+    margin-top: 0 !important;
+    margin-bottom: 30%;
+    margin-left: 50%;
   }
 }
 

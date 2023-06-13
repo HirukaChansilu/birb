@@ -22,26 +22,26 @@ export default function Landing() {
   }, []);
 
   return (
-    <section className="image-container" id="landing" ref={sectionRef}>
-      <div className="title-container">
-        <h1 style={{ marginTop: `${offset[0]}%`, scale: `${offset[1]}%` }}>
-          Birb
-        </h1>
-      </div>
-      <div className="description-container">
-        <p>
-          Experience what AI has to offer with <br />
-          Just saying “Hello, Birb!”
-        </p>
-      </div>
-      <div
-        className="foreground"
-        style={{ backgroundImage: `url(${foreground})` }}
-      />
-      <div
-        className="background"
-        style={{ backgroundImage: `url(${background})` }}
-      />
-    </section>
+    <>
+      <section className="image-container" id="landing">
+        <div className="title-container">
+          <h1 style={{ marginTop: `${offset[0]}%`, scale: `${offset[1]}%` }}>
+            Birb
+          </h1>
+        </div>
+        <div className="description-container">
+          <p>Experience what AI has to offer with Just saying “Hello, Birb!”</p>
+        </div>
+        <div
+          className="foreground"
+          style={{ backgroundImage: `url(${foreground})` }}
+        />
+        <div
+          className="background"
+          style={{ backgroundImage: `url(${background})` }}
+        />
+      </section>
+      <section className="dummy" ref={sectionRef} />
+    </>
   );
 }
