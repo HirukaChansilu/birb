@@ -100,7 +100,7 @@ export default function Section2() {
 
           <div
             className="iwatch-container"
-            style={{ left: `${40 + pagePercentage / 1.5}%` }}
+            style={{ left: `${50 + pagePercentage / 1.5}%` }}
           >
             <img
               src={iwatchfg}

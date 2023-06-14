@@ -6,13 +6,16 @@ import usePageScrollPercentage from "../../hooks/usePageScrollPercentage";
 import "./styles.css";
 
 import iphone from "./iphone.png";
+import iwatch from "./iwatch.png";
 
 export default function Section3() {
   const sectionRef = useRef(null);
   const gradientRef = useRef(null);
+  const watchRef = useRef(null);
 
   const inView = usePageInView(sectionRef);
   const percentage = usePageScrollPercentage(gradientRef);
+  const watchState = usePageInView(watchRef);
 
   return (
     <section id="sec-3" ref={sectionRef}>
@@ -57,7 +60,10 @@ export default function Section3() {
           }%`,
         }}
       >
-        <h3>“Hey Birb, How is the Weather today?”</h3>
+        <h3>
+          “Hey Birb, How is the <br />
+          Weather today?”
+        </h3>
         <img className="iphone" src={iphone} />
         <div
           className="gradient-cropper"
@@ -78,8 +84,22 @@ export default function Section3() {
         </div>
       </div>
 
-      {/* <div className="dummy"></div>
-      <div className="dummy"></div> */}
+      <div className="iwatch-content-container">
+        <div className="iwatch-text-container">
+          <h3>
+            “Hey Birb, How far <br />
+            is Home from <br />
+            here?”
+          </h3>
+        </div>
+        <img
+          className="iwatch"
+          src={iwatch}
+          style={{ paddingLeft: watchState ? "var(--wspl)" : "0rem" }}
+        />
+      </div>
+
+      <div className="dummy" ref={watchRef} />
     </section>
   );
 }

@@ -131,8 +131,13 @@
 
 .iwatch-container {
   position: absolute;
-  top: 26%;
+  margin: auto 0;
+  padding-bottom: 4%;
   left: 0%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   transition: all 1s ease-out;
 }
@@ -183,7 +188,7 @@
     max-width: 26rem;
   }
   .iwatch-container {
-    top: 32%;
+    padding-bottom: 6%;
   }
   .iwatch-container img {
     height: 15rem;
@@ -198,9 +203,7 @@
     font-size: 0.8rem;
     max-width: 24rem;
   }
-  .iwatch-container {
-    top: 36%;
-  }
+
   .iwatch-container img {
     height: 12rem;
   }
@@ -214,7 +217,7 @@
     font-size: 0.8rem;
   }
   .iwatch-container {
-    top: 39%;
+    padding-bottom: 8%;
   }
   .iwatch-container img {
     height: 8rem;
