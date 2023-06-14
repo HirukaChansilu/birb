@@ -41,7 +41,7 @@ export default function Landing() {
           style={{ backgroundImage: `url(${background})` }}
         />
       </section>
-      <section className="dummy" ref={sectionRef} />
+      <div className="dummy" ref={sectionRef} />
     </>
   );
 }

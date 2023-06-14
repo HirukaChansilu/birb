@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-export default function usePageScrollPercentage(ref) {
+export default function usePageExitPercentage(ref) {
   const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
       const rect = ref.current.getBoundingClientRect();
-      const difference = rect.height - rect.y;
+      const difference = -1 * rect.y;
       const offset =
         difference > 0
           ? difference < rect.height

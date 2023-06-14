@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
-import useObjectInView from "../../hooks/useObjectInView";
 
+import useObjectInView from "../../hooks/useObjectInView";
 import usePageExiting from "../../hooks/usePageExiting";
+import usePageScrollPercentage from "../../hooks/usePageScrollPercentage";
+import usePageExitPercentage from "../../hooks/usePageExitPercentage";
 
 import "./styles.css";
 
@@ -13,17 +15,18 @@ import macbook from "./macbook.png";
 
 import iwatchbg from "./iwatch-bg.png";
 import iwatchfg from "./iwatch-fg.png";
-import usePageScrollPercentage from "../../hooks/usePageScrollPercentage";
 
 export default function Section2() {
   const containerRef = useRef(null);
   const fixedPageRef = useRef(null);
   const percentageRef = useRef(null);
+  const scrollRef = useRef(null);
 
   const containerVisible = useObjectInView(containerRef);
   const fixedPageState = usePageExiting(fixedPageRef);
   const pagePercentage = usePageScrollPercentage(percentageRef);
   const showAnytime = usePageExiting(percentageRef);
+  const scrollPercentage = usePageExitPercentage(scrollRef);
 
   useEffect(() => {
     if (showAnytime) {
@@ -50,11 +53,16 @@ export default function Section2() {
 
   return (
     <>
-      <section id="sec-2" ref={fixedPageRef}>
+      <section
+        id="sec-2"
+        style={{ position: fixedPageState ? "relative" : "sticky" }}
+        ref={fixedPageRef}
+      >
         <div
           className={`fixed-container ${
             fixedPageState && "fixed-container-active"
           }`}
+          style={{ top: `${scrollPercentage * -1}%` }}
         >
           <div className="text-container" ref={containerRef}>
             <h2>
@@ -149,7 +157,8 @@ export default function Section2() {
           />
         </div>
       </section>
-      <section ref={percentageRef}></section>
+      <div className="dummy white-bg" ref={percentageRef} />
+      <div className="dummy white-bg" ref={scrollRef} />
     </>
   );
 }
