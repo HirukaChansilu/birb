@@ -24,7 +24,7 @@ export default function Section2() {
 
   const containerVisible = useObjectInView(containerRef);
   const fixedPageState = usePageExiting(fixedPageRef);
-  const pagePercentage = usePageScrollPercentage(percentageRef);
+  const pagePercentage = usePageScrollPercentage(fixedPageRef);
   const showAnytime = usePageExiting(percentageRef);
   const scrollPercentage = usePageExitPercentage(scrollRef);
 
