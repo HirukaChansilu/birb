@@ -7,15 +7,18 @@ import "./styles.css";
 
 import iphone from "./iphone.png";
 import iwatch from "./iwatch.png";
+import echo from "./echo.png";
 
 export default function Section3() {
   const sectionRef = useRef(null);
   const gradientRef = useRef(null);
   const watchRef = useRef(null);
+  const mediaRef = useRef(null);
 
   const inView = usePageInView(sectionRef);
   const percentage = usePageScrollPercentage(gradientRef);
   const watchState = usePageInView(watchRef);
+  const echoPercentage = usePageScrollPercentage(mediaRef);
 
   return (
     <section id="sec-3" ref={sectionRef}>
@@ -99,7 +102,44 @@ export default function Section3() {
         />
       </div>
 
-      <div className="dummy" ref={watchRef} />
+      <div
+        className="media-container"
+        ref={watchRef}
+        style={{
+          backgroundColor: echoPercentage > 30 ? "#121212" : "#fff",
+        }}
+      >
+        <div className="media-absolute">
+          <h3
+            style={{
+              color: echoPercentage > 30 ? "#fff" : "var(--dark-heading)",
+            }}
+          >
+            {echoPercentage > 30 ? (
+              <>
+                “Hey Birb, Play Stranger <br />
+                Things on Netflix”
+              </>
+            ) : (
+              <>
+                “Hey Birb, Play Sweet <br />
+                Child O&apos; Mine”
+              </>
+            )}
+          </h3>
+          <p>
+            {echoPercentage > 30
+              ? "*Netflix is a Trademark of Netflix, Inc."
+              : "*Requires a Third party Music Service Provider"}
+          </p>
+        </div>
+      </div>
+
+      <div className="echo-container" ref={mediaRef}>
+        <img className="echo-main" src={echo} />
+      </div>
+
+      <div className="dummy" />
     </section>
   );
 }
