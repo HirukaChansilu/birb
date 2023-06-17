@@ -27,6 +27,15 @@
   color: #fff;
 }
 
+.gradient-overflow {
+  position: relative;
+
+  width: 100%;
+  min-height: 300vh;
+
+  overflow: hidden;
+}
+
 .gradient-container {
   position: relative;
 
@@ -263,8 +272,8 @@
 .echo-container {
   height: fit-content;
   padding: 10rem 0;
-  width: 100%;
 
+  width: 100%;
   overflow: hidden;
 
   position: relative;

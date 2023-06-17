@@ -50,40 +50,42 @@ export default function Section3() {
         </h2>
       </div>
 
-      <div
-        className="gradient-container"
-        ref={gradientRef}
-        style={{
-          scale: `${
-            percentage < 25
-              ? 100
-              : 100 - ((percentage - 25) * 30) / 50 < 70
-              ? 70
-              : 100 - ((percentage - 25) * 30) / 50
-          }%`,
-        }}
-      >
-        <h3>
-          “Hey Birb, How is the <br />
-          Weather today?”
-        </h3>
-        <img className="iphone" src={iphone} />
+      <div className="gradient-overflow">
         <div
-          className="gradient-cropper"
+          className="gradient-container"
+          ref={gradientRef}
           style={{
-            height: `${
+            scale: `${
               percentage < 25
-                ? 300
-                : 300 - ((percentage - 25) * 240) / 45 < 60
-                ? 60
-                : 300 - ((percentage - 25) * 240) / 45
-            }vh`,
-            borderRadius: `${
-              percentage < 50 ? 0 : ((percentage - 50) * 100) / 50
-            }px`,
+                ? 100
+                : 100 - ((percentage - 25) * 30) / 50 < 70
+                ? 70
+                : 100 - ((percentage - 25) * 30) / 50
+            }%`,
           }}
         >
-          <div className="gradient" />
+          <h3>
+            “Hey Birb, How is the <br />
+            Weather today?”
+          </h3>
+          <img className="iphone" src={iphone} />
+          <div
+            className="gradient-cropper"
+            style={{
+              height: `${
+                percentage < 25
+                  ? 300
+                  : 300 - ((percentage - 25) * 240) / 45 < 60
+                  ? 60
+                  : 300 - ((percentage - 25) * 240) / 45
+              }vh`,
+              borderRadius: `${
+                percentage < 50 ? 0 : ((percentage - 50) * 100) / 50
+              }px`,
+            }}
+          >
+            <div className="gradient" />
+          </div>
         </div>
       </div>
 

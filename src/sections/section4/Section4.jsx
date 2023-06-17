@@ -19,10 +19,11 @@ export default function Section4() {
 
     if (inView) {
       document.getElementById("media-container").style.opacity = 0;
-      document.getElementById("sec-4").style.opacity = 1;
 
       netflixVideo.currentTime = 0;
       netflixVideo.play();
+
+      document.getElementById("sec-4").style.opacity = 1;
 
       nrc.dataset.timeout = setTimeout(() => {
         nrc.style.scale = "100%";

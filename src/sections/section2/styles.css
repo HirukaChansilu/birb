@@ -70,11 +70,11 @@
   position: absolute;
   inset: 0;
   width: 100%;
-  min-height: 100vh;
+  min-height: 150vh;
+
+  overflow: hidden;
 
   z-index: 9;
-
-  clip-path: inset(0% 0% -100% 0%);
 }
 
 .image-fragment {
@@ -94,37 +94,37 @@
 #if-0 {
   top: 2%;
   right: -10%;
-  height: 55%;
+  height: 35%;
   transform: translate(40%, -50%);
 }
 
 #if-1 {
-  top: -35%;
-  right: 30%;
-  height: 58%;
+  top: -20%;
+  right: 25%;
+  height: 35%;
   rotate: 35deg;
   transform: translate(0%, -40%);
 }
 
 #if-2 {
-  bottom: -40%;
+  bottom: 10%;
   left: -3%;
-  height: 70%;
+  height: 45%;
   rotate: -10deg;
   transform: translate(-30%, 40%);
 }
 
 #if-3 {
-  top: -35%;
-  left: -10%;
-  height: 100%;
+  top: -22%;
+  left: -8%;
+  height: 60%;
   transform: translate(-30%, -40%);
 }
 
 #if-4 {
-  bottom: -20%;
+  bottom: 5%;
   right: -10%;
-  height: 50%;
+  height: 30%;
   rotate: -10deg;
   transform: translate(40%, 60%);
 }
@@ -217,7 +217,7 @@
     font-size: 0.8rem;
   }
   .iwatch-container {
-    padding-bottom: 8%;
+    padding-bottom: 11%;
   }
   .iwatch-container img {
     height: 8rem;
@@ -228,94 +228,94 @@
   #if-0 {
     top: 2%;
     right: -10%;
-    height: 40%;
+    height: 25%;
   }
 
   #if-1 {
-    top: -25%;
-    right: 20%;
-    height: 40%;
+    top: -14%;
+    right: 25%;
+    height: 25%;
   }
 
   #if-2 {
-    bottom: -30%;
-    left: -5%;
-    height: 64%;
+    bottom: 10%;
+    left: -3%;
+    height: 37%;
   }
 
   #if-3 {
-    top: -35%;
-    left: -15%;
-    height: 80%;
+    top: -20%;
+    left: -10%;
+    height: 50%;
   }
 
   #if-4 {
-    bottom: -10%;
-    right: -15%;
-    height: 45%;
+    bottom: 25%;
+    right: -10%;
+    height: 25%;
   }
 }
 
 @media screen and (max-width: 900px) {
   #if-0 {
-    top: 10%;
+    top: 8%;
     right: -10%;
-    height: 25%;
+    height: 18%;
   }
 
   #if-1 {
-    top: -10%;
+    top: -12%;
     right: 15%;
-    height: 25%;
+    height: 20%;
   }
 
   #if-2 {
-    bottom: -10%;
-    left: -5%;
-    height: 45%;
+    bottom: 25%;
+    left: -3%;
+    height: 32%;
   }
 
   #if-3 {
-    top: -20%;
-    left: -8%;
-    height: 50%;
+    top: -5%;
+    left: -10%;
+    height: 30%;
   }
 
   #if-4 {
-    bottom: 5%;
+    bottom: 36%;
     right: -20%;
-    height: 30%;
+    height: 20%;
   }
 }
 
 @media screen and (max-width: 550px) {
   #if-0 {
-    top: 10%;
+    top: 8%;
     right: -10%;
-    height: 15%;
+    height: 12%;
   }
 
   #if-1 {
-    top: -5%;
-    right: 15%;
+    top: -8%;
+    right: 10%;
     height: 15%;
   }
 
   #if-2 {
-    bottom: 0%;
-    left: -5%;
-    height: 30%;
+    bottom: 25%;
+    left: -3%;
+    height: 25%;
   }
 
   #if-3 {
-    top: -5%;
-    left: -8%;
-    height: 30%;
+    top: 0%;
+    left: -10%;
+    height: 28%;
   }
 
   #if-4 {
-    bottom: 15%;
-    right: -30%;
-    height: 20%;
+    bottom: 42%;
+    right: -20%;
+    height: 15%;
   }
 }
