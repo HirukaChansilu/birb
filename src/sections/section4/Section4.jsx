@@ -51,6 +51,7 @@ export default function Section4() {
       document.getElementById("media-container").style.opacity = 1;
       document.getElementById("thumb").style.width = "0%";
       nrc.style.scale = "var(--scale-nrc)";
+      netflixVideo.currentTime = 0;
     }
   }, [inView]);
 
