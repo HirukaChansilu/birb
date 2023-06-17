@@ -89,19 +89,21 @@ export default function Section3() {
         </div>
       </div>
 
-      <div className="iwatch-content-container">
-        <div className="iwatch-text-container">
-          <h3>
-            “Hey Birb, How far <br />
-            is Home from <br />
-            here?”
-          </h3>
+      <div className="iwatch-cropper">
+        <div className="iwatch-content-container">
+          <div className="iwatch-text-container">
+            <h3>
+              “Hey Birb, How far <br />
+              is Home from <br />
+              here?”
+            </h3>
+          </div>
+          <img
+            className="iwatch"
+            src={iwatch}
+            style={{ paddingLeft: watchState ? "var(--wspl)" : "0rem" }}
+          />
         </div>
-        <img
-          className="iwatch"
-          src={iwatch}
-          style={{ paddingLeft: watchState ? "var(--wspl)" : "0rem" }}
-        />
       </div>
 
       <div

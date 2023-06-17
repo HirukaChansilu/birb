@@ -151,6 +151,16 @@
 
 /* Iwatch */
 
+.iwatch-cropper {
+  position: relative;
+  bottom: 6rem;
+
+  width: 100%;
+  padding: 6rem 0;
+
+  overflow: hidden;
+}
+
 .iwatch-content-container {
   position: relative;
   width: 100%;
@@ -160,7 +170,6 @@
   justify-content: center;
   align-items: center;
 
-  bottom: 6rem;
   --wspl: 36rem;
 }
 
