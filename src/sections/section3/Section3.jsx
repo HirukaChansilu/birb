@@ -106,10 +106,16 @@ export default function Section3() {
         className="media-container"
         ref={watchRef}
         style={{
-          backgroundColor: echoPercentage > 30 ? "#121212" : "#fff",
+          backgroundColor: echoPercentage > 30 ? "var(--dark-bg)" : "#fff",
         }}
       >
-        <div className="media-absolute">
+        <div
+          className="media-absolute"
+          id="media-container"
+          style={{
+            position: echoPercentage > 30 ? "fixed" : "sticky",
+          }}
+        >
           <h3
             style={{
               color: echoPercentage > 30 ? "#fff" : "var(--dark-heading)",

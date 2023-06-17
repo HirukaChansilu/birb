@@ -10,6 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  --dark-bg: #121212;
   --dark-heading: #4b4b4b;
   --dark-para: #8c8c8c;
 }
@@ -50,12 +51,21 @@ section {
   position: relative;
   min-height: 100vh;
   width: 100%;
+  z-index: -5;
 
   background-color: transparent;
 }
 
 .white-bg {
+  position: relative;
   background-color: #fff;
+  z-index: 2;
+}
+
+.bg-dark {
+  position: relative;
+  background-color: var(--dark-bg);
+  z-index: 2;
 }
 
 .image-container {
