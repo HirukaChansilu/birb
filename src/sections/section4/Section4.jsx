@@ -19,6 +19,8 @@ export default function Section4() {
 
     if (inView) {
       document.getElementById("media-container").style.opacity = 0;
+      document.getElementById("playback-loader").style.opacity = 1;
+      document.getElementById("thumb").style.width = 0;
 
       netflixVideo.currentTime = 0;
       netflixVideo.play();
@@ -32,13 +34,22 @@ export default function Section4() {
       nrc.dataset.timeoutText = setTimeout(() => {
         setTextAnimation(true);
       }, 4000);
+      nrc.dataset.timeoutThumb = setTimeout(() => {
+        document.getElementById("thumb").style.width = "100%";
+        nrc.dataset.timeoutThumbLoader = setTimeout(() => {
+          document.getElementById("playback-loader").style.opacity = 0;
+        }, 9117);
+      }, 100);
     } else {
       clearTimeout(nrc.dataset.timeout);
       clearTimeout(nrc.dataset.timeoutText);
+      clearTimeout(nrc.dataset.timeoutThumb);
+      clearTimeout(nrc.dataset.timeoutThumbLoader);
 
       setTextAnimation(false);
       document.getElementById("sec-4").style.opacity = 0;
       document.getElementById("media-container").style.opacity = 1;
+      document.getElementById("thumb").style.width = "0%";
       nrc.style.scale = "var(--scale-nrc)";
     }
   }, [inView]);
@@ -73,6 +84,10 @@ export default function Section4() {
               style={{ backgroundImage: `url(${background})` }}
             />
           </div>
+        </div>
+
+        <div id="playback-loader">
+          <div className="thumb" id="thumb" />
         </div>
       </section>
       <div className="dummy bg-dark" ref={sectionRef} />

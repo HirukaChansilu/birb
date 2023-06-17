@@ -65,6 +65,36 @@
   transition: all 0.8s ease-in-out;
 }
 
+#playback-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background-color: #3f3f3f62;
+  z-index: 28;
+
+  transition: opacity 0.8s ease-in-out;
+}
+
+#playback-loader .thumb {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 5px;
+  width: 0%;
+
+  background: linear-gradient(90.14deg, #133c55 0%, #5465ff 100%);
+  border-radius: 0 5px 5px 0;
+
+  transition: width 9.117s linear;
+}
+
 @media screen and (min-width: 1500px) {
   .netflix-container {
     --scale-nrc: 420%;
