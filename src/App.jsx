@@ -11,6 +11,12 @@ function App() {
       <Section2 />
       <Section3 />
       <Section4 />
+      <div
+        className="dummy white-bg"
+        style={{
+          zIndex: 30,
+        }}
+      />
     </>
   );
 }

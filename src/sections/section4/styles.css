@@ -50,6 +50,18 @@
   outline: none;
 }
 
+.netflix-room-container h2 {
+  font-size: 10rem;
+  font-weight: 500;
+  color: var(--dark-heading);
+
+  --mb: 25%;
+  margin: 0 auto;
+  margin-bottom: var(--mb);
+
+  transition: all 0.8s ease-in-out;
+}
+
 @media screen and (min-width: 1500px) {
   .netflix-container {
     --scale-nrc: 420%;
@@ -57,5 +69,33 @@
   .netflix-video {
     height: auto;
     width: 25.2%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .netflix-room-container h2 {
+    font-size: 8rem;
+    --mb: 34%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .netflix-room-container h2 {
+    font-size: 6rem;
+    --mb: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .netflix-room-container h2 {
+    font-size: 4rem;
+    --mb: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .netflix-room-container h2 {
+    font-size: 3rem;
+    --mb: 70%;
   }
 }
