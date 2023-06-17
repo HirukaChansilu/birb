@@ -73,8 +73,9 @@ export default function Section2() {
                 }}
                 id="meet-the"
               >
-                Meet the
+                Meet&nbsp;the
               </span>
+              &nbsp;
               <span className="gradient-text birb-static">Birb</span>
               <span
                 className="gradient-text birb-moving"
