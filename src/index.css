@@ -43,6 +43,10 @@ section {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .dummy {
   position: relative;
   min-height: 100vh;

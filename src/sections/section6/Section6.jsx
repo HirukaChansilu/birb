@@ -25,7 +25,7 @@ export default function Section6() {
     if (kitchenInView) {
       document.getElementById("sec-6").dataset.timeout = setTimeout(() => {
         setText2(true);
-      }, 2500);
+      }, 1500);
     } else {
       clearTimeout(document.getElementById("sec-6").dataset.timeout);
       setText2(false);
@@ -125,20 +125,6 @@ export default function Section6() {
             And Automate <br />
             Your Day
           </h2>
-
-          <ChatBubble
-            className={kitchenInView ? "b-1" : ""}
-            text="Hey Birb, Set Refrigerator to Low Power Mode"
-          />
-          <ChatBubble
-            className={kitchenInView ? "b-2" : ""}
-            text="Hey Birb, Set Microwave for 15 Minutes"
-          />
-          <ChatBubble
-            className={kitchenInView ? "b-3" : ""}
-            text="Hey Birb, Make a Coffee"
-            flip
-          />
         </div>
 
         <div
@@ -155,6 +141,18 @@ export default function Section6() {
           <div className="circle c6" />
         </div>
       </section>
+
+      <div className={`bb-c ${kitchenInView && "b-1"}`}>
+        <ChatBubble text="Hey Birb, Set Refrigerator to Low Power Mode" />
+      </div>
+
+      <div className={`bb-c ${kitchenInView && "b-2"}`}>
+        <ChatBubble text="Hey Birb, Set Microwave for 15 Minutes" />
+      </div>
+
+      <div className={`bb-c ${kitchenInView && "b-3"}`}>
+        <ChatBubble text="Hey Birb, Make a Coffee" flip />
+      </div>
 
       <div className="dummy" />
       <div className="dummy" ref={ref} />
