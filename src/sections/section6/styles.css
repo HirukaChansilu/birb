@@ -21,6 +21,8 @@
 #sec-6 .aurora {
   position: absolute;
   top: 0;
+
+  transition: opacity 0.8s ease-in-out;
 }
 
 .topic-container {
@@ -113,4 +115,58 @@
   #sec-6 h2 {
     font-size: 2.5rem;
   }
+}
+
+.bubble-container {
+  scale: 0.7;
+  opacity: 0.5;
+  transform: translateY(100%);
+
+  transition: all 0.3s ease-out;
+}
+
+@keyframes bubble-up {
+  0% {
+    bottom: -20%;
+  }
+  20% {
+    bottom: 5%;
+  }
+  80% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: -20%;
+  }
+}
+
+.tc-4 .bubble {
+  position: absolute;
+  bottom: -20%;
+
+  z-index: 50;
+}
+
+.b-1 {
+  animation: bubble-up 1.5s ease-in-out 0.5s 1 forwards normal;
+}
+
+.b-2 {
+  animation: bubble-up 1.5s ease-in-out 2s 1 forwards normal;
+}
+
+.b-3 {
+  animation: bubble-up 1.5s ease-in-out 3.5s 1 forwards normal;
+}
+
+.kitchen-img {
+  filter: brightness(80%);
+}
+
+.tc-4 h2 {
+  margin-bottom: 7%;
+
+  position: absolute;
+
+  transition: all 0.5s ease-in-out;
 }
