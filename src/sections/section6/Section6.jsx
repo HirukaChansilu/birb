@@ -79,7 +79,7 @@ export default function Section6() {
           <div
             className="bubble-container"
             style={{
-              scale: chatInView ? 1 : 0.7,
+              scale: chatInView ? "100%" : "70%",
               opacity: chatInView ? 1 : 0.5,
               transform: chatInView ? "translateY(0%)" : "translateY(100%)",
             }}
