@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function usePageScrollPercentage(ref) {
+export default function usePageScrollPercentage(ref, maxValue = 100) {
   const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
@@ -13,7 +13,8 @@ export default function usePageScrollPercentage(ref) {
             ? difference
             : rect.height
           : 0;
-      const value = (offset / rect.height) * 100;
+      const percentage = (offset / rect.height) * 100;
+      const value = maxValue !== 100 ? percentage > maxValue : percentage;
       setPercentage((preVal) => {
         if (preVal === value) {
           return preVal;
@@ -22,7 +23,7 @@ export default function usePageScrollPercentage(ref) {
         }
       });
     });
-  }, [ref]);
+  }, [ref, maxValue]);
 
   return percentage;
 }

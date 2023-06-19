@@ -20,15 +20,13 @@ export default function Section3() {
   const inView = usePageInView(sectionRef);
   const percentage = usePageScrollPercentage(gradientRef);
   const watchState = usePageInView(watchRef);
-  const echoPercentage = usePageScrollPercentage(mediaRef);
+  const echoPercentagePasses = usePageScrollPercentage(mediaRef, 30);
 
   const { changeTheme } = useContext(NavbarContext);
 
-  // TODO: echo > 30 fix
-
   useEffect(() => {
-    changeTheme(echoPercentage > 30 ? "dark" : "light");
-  }, [echoPercentage, changeTheme]);
+    changeTheme(echoPercentagePasses ? "dark" : "light");
+  }, [echoPercentagePasses, changeTheme]);
 
   return (
     <section id="sec-3" ref={sectionRef}>
@@ -120,22 +118,22 @@ export default function Section3() {
         className="media-container"
         ref={watchRef}
         style={{
-          backgroundColor: echoPercentage > 30 ? "var(--dark-bg)" : "#fff",
+          backgroundColor: echoPercentagePasses ? "var(--dark-bg)" : "#fff",
         }}
       >
         <div
           className="media-absolute"
           id="media-container"
           style={{
-            position: echoPercentage > 30 ? "fixed" : "sticky",
+            position: echoPercentagePasses ? "fixed" : "sticky",
           }}
         >
           <h3
             style={{
-              color: echoPercentage > 30 ? "#fff" : "var(--dark-heading)",
+              color: echoPercentagePasses ? "#fff" : "var(--dark-heading)",
             }}
           >
-            {echoPercentage > 30 ? (
+            {echoPercentagePasses ? (
               <>
                 “Hey Birb, Play Stranger <br />
                 Things on Netflix”
@@ -148,7 +146,7 @@ export default function Section3() {
             )}
           </h3>
           <p>
-            {echoPercentage > 30
+            {echoPercentagePasses
               ? "*Netflix is a Trademark of Netflix, Inc."
               : "*Requires a Third party Music Service Provider"}
           </p>
