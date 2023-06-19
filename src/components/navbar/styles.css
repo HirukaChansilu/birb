@@ -1,5 +1,8 @@
 nav {
   position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 9999;
 
   width: 60%;
@@ -7,7 +10,10 @@ nav {
 
   padding: 0 20%;
 
-  background: rgba(116, 116, 116, 0.2);
+  --bg-color: rgba(116, 116, 116, 0.2);
+  --bg-color-trans: rgba(116, 116, 116, 0);
+
+  background: var(--bg-color);
   backdrop-filter: blur(5px);
   color: #fff;
 
@@ -25,6 +31,8 @@ nav {
 
   display: flex;
   align-items: center;
+
+  transition: color 0.2s linear;
 }
 
 nav img {
@@ -45,7 +53,8 @@ nav a:hover {
 }
 
 .nav-light {
-  background: rgba(211, 211, 211, 0.2);
+  --bg-color: rgba(211, 211, 211, 0.2);
+  --bg-color-trans: rgba(211, 211, 211, 0);
 }
 
 .nav-light,
@@ -53,7 +62,7 @@ nav a:hover {
   color: #4b4b4b;
 }
 
-nav a:hover {
+.nav-light a:hover {
   color: #7e7e7e;
 }
 
