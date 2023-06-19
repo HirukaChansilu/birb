@@ -7,7 +7,7 @@ import "../../aurora.css";
 
 import nodes from "./nodes.svg";
 import dot from "./dot.png";
-import kitchen from "./kitchen.jpg";
+import kitchen from "./background.jpg";
 import foreground from "./foreground.png";
 
 export default function Section6() {
