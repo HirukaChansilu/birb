@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import usePageInView from "../../hooks/usePageInView";
+
+import { NavbarContext } from "../../App";
 
 import "./styles.css";
 
@@ -21,6 +23,8 @@ export default function Section5() {
   const d3View = usePageInView(d3);
   const d4View = usePageInView(d4);
 
+  const { changeTheme } = useContext(NavbarContext);
+
   useEffect(() => {
     if (d4View) {
       setActiveCard(3);
@@ -32,6 +36,10 @@ export default function Section5() {
       setActiveCard(0);
     }
   }, [d1View, d2View, d3View, d4View]);
+
+  useEffect(() => {
+    changeTheme(d1View ? "light" : "dark");
+  }, [d1View, changeTheme]);
 
   return (
     <>

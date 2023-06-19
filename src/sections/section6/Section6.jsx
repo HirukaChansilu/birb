@@ -1,6 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import usePageInView from "../../hooks/usePageInView";
 import ChatBubble from "../../components/chatBubble/ChatBubble";
+import usePageExiting from "../../hooks/usePageExiting";
+
+import { NavbarContext } from "../../App";
 
 import "./styles.css";
 import "../../aurora.css";
@@ -14,12 +17,16 @@ export default function Section6() {
   const ref = useRef(null);
   const chatRef = useRef(null);
   const kitchenRef = useRef(null);
+  const mainRef = useRef(null);
 
   const inView = usePageInView(ref);
   const chatInView = usePageInView(chatRef);
   const kitchenInView = usePageInView(kitchenRef);
+  const pageExit = usePageExiting(mainRef);
 
   const [text2, setText2] = useState(false);
+
+  const { changeTheme } = useContext(NavbarContext);
 
   useEffect(() => {
     if (kitchenInView) {
@@ -32,9 +39,13 @@ export default function Section6() {
     }
   }, [kitchenInView]);
 
+  useEffect(() => {
+    changeTheme(pageExit ? "dark" : "light");
+  }, [pageExit, changeTheme]);
+
   return (
     <>
-      <section id="sec-6">
+      <section id="sec-6" ref={mainRef}>
         <div
           className="topic-container"
           style={{

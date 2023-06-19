@@ -1,3 +1,6 @@
+import { createContext, useMemo, useState } from "react";
+
+import Navbar from "./components/navbar/Navbar";
 import Landing from "./sections/landing/Landing";
 import Section2 from "./sections/section2/Section2";
 import Section3 from "./sections/section3/Section3";
@@ -7,10 +10,15 @@ import Section6 from "./sections/section6/Section6";
 import Section7 from "./sections/section7/Section7";
 import Footer from "./components/footer/Footer";
 
+const NavbarContext = createContext(null);
+
 function App() {
+  const [theme, changeTheme] = useState("dark");
+  const value = useMemo(() => ({ theme, changeTheme }), [theme]);
+
   return (
-    <>
-      {/* TODO: Navbar */}
+    <NavbarContext.Provider value={value}>
+      <Navbar />
       <Landing />
       <Section2 />
       <Section3 />
@@ -21,8 +29,9 @@ function App() {
         <Section7 />
         <Footer />
       </div>
-    </>
+    </NavbarContext.Provider>
   );
 }
 
 export default App;
+export { NavbarContext };

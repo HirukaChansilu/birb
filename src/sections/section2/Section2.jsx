@@ -1,4 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
+
+import { NavbarContext } from "../../App";
 
 import useObjectInView from "../../hooks/useObjectInView";
 import usePageExiting from "../../hooks/usePageExiting";
@@ -28,6 +30,8 @@ export default function Section2() {
   const showAnytime = usePageExiting(percentageRef);
   const scrollPercentage = usePageExitPercentage(scrollRef);
 
+  const { changeTheme } = useContext(NavbarContext);
+
   useEffect(() => {
     if (showAnytime) {
       document.getElementById("anytime").style.opacity = 0;
@@ -50,6 +54,10 @@ export default function Section2() {
       }, 300);
     }
   }, [showAnytime]);
+
+  useEffect(() => {
+    changeTheme(fixedPageState ? "light" : "dark");
+  }, [fixedPageState, changeTheme]);
 
   return (
     <>

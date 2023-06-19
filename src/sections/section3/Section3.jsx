@@ -1,4 +1,6 @@
-import { useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
+
+import { NavbarContext } from "../../App";
 
 import usePageInView from "../../hooks/usePageInView";
 import usePageScrollPercentage from "../../hooks/usePageScrollPercentage";
@@ -19,6 +21,14 @@ export default function Section3() {
   const percentage = usePageScrollPercentage(gradientRef);
   const watchState = usePageInView(watchRef);
   const echoPercentage = usePageScrollPercentage(mediaRef);
+
+  const { changeTheme } = useContext(NavbarContext);
+
+  // TODO: echo > 30 fix
+
+  useEffect(() => {
+    changeTheme(echoPercentage > 30 ? "dark" : "light");
+  }, [echoPercentage, changeTheme]);
 
   return (
     <section id="sec-3" ref={sectionRef}>

@@ -1,4 +1,9 @@
+import { useContext, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+
+import usePageExiting from "../../hooks/usePageExiting";
+
+import { NavbarContext } from "../../App";
 
 import "./styles.css";
 
@@ -23,8 +28,17 @@ Button.propTypes = {
 };
 
 export default function Section7() {
+  const ref = useRef(null);
+  const exiting = usePageExiting(ref);
+
+  const { changeTheme } = useContext(NavbarContext);
+
+  useEffect(() => {
+    changeTheme(exiting ? "light" : "dark");
+  }, [exiting, changeTheme]);
+
   return (
-    <section id="sec-7">
+    <section id="sec-7" ref={ref}>
       <h2>Download Now</h2>
 
       <div className="btn-container">
