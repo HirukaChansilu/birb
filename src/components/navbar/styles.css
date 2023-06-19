@@ -13,8 +13,8 @@ nav {
   --bg-color: rgba(116, 116, 116, 0.2);
   --bg-color-trans: rgba(116, 116, 116, 0);
 
-  background: var(--bg-color);
-  backdrop-filter: blur(5px);
+  background: var(--bg-color-trans);
+  backdrop-filter: blur(0px);
   color: #fff;
 
   display: flex;
