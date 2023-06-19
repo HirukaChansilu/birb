@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 
 import "./styles.css";
 
-import foreground from "./foreground.png";
-import background from "./background.png";
+import foreground from "./foreground.webp";
+import background from "./background.webp";
 
 export default function Landing() {
   const [offset, setOffset] = useState([12, 100]);

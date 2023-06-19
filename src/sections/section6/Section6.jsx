@@ -6,9 +6,9 @@ import "./styles.css";
 import "../../aurora.css";
 
 import nodes from "./nodes.svg";
-import dot from "./dot.png";
-import kitchen from "./background.jpg";
-import foreground from "./foreground.png";
+import dot from "./dot.webp";
+import kitchen from "./background.webp";
+import foreground from "./foreground.webp";
 
 export default function Section6() {
   const ref = useRef(null);

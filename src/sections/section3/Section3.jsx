@@ -5,9 +5,9 @@ import usePageScrollPercentage from "../../hooks/usePageScrollPercentage";
 
 import "./styles.css";
 
-import iphone from "./iphone.png";
-import iwatch from "./iwatch.png";
-import echo from "./echo.png";
+import iphone from "./iphone.webp";
+import iwatch from "./iwatch.webp";
+import echo from "./echo.webp";
 
 export default function Section3() {
   const sectionRef = useRef(null);

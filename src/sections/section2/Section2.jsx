@@ -7,14 +7,14 @@ import usePageExitPercentage from "../../hooks/usePageExitPercentage";
 
 import "./styles.css";
 
-import coffee from "./coffee.png";
-import echodot from "./echodot.png";
-import iphone from "./iphone.png";
-import leaves from "./leaves.png";
-import macbook from "./macbook.png";
+import coffee from "./coffee.webp";
+import echodot from "./echodot.webp";
+import iphone from "./iphone.webp";
+import leaves from "./leaves.webp";
+import macbook from "./macbook.webp";
 
-import iwatchbg from "./iwatch-bg.png";
-import iwatchfg from "./iwatch-fg.png";
+import iwatchbg from "./iwatch-bg.webp";
+import iwatchfg from "./iwatch-fg.webp";
 
 export default function Section2() {
   const containerRef = useRef(null);

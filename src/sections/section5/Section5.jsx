@@ -3,10 +3,10 @@ import usePageInView from "../../hooks/usePageInView";
 
 import "./styles.css";
 
-import birbNest from "./birbNest.png";
-import birbHome from "./birbHome.png";
-import birbPro from "./birbPro.png";
-import birbView from "./birbView.png";
+import birbNest from "./birbNest.webp";
+import birbHome from "./birbHome.webp";
+import birbPro from "./birbPro.webp";
+import birbView from "./birbView.webp";
 
 export default function Section5() {
   const [activeCard, setActiveCard] = useState(0);

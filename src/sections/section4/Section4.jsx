@@ -4,8 +4,8 @@ import usePageInView from "../../hooks/usePageInView";
 import "./styles.css";
 
 import netflix from "./netflix.mp4";
-import foreground from "./foreground.png";
-import background from "./background.jpg";
+import foreground from "./foreground.webp";
+import background from "./background.webp";
 
 export default function Section4() {
   const [textAnimation, setTextAnimation] = useState(false);
