@@ -93,3 +93,11 @@ a {
 .background {
   z-index: -1;
 }
+
+.footer-cropper {
+  overflow: hidden;
+  background-color: #fff;
+
+  position: relative;
+  z-index: 45;
+}

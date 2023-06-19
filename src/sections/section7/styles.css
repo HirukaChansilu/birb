@@ -25,6 +25,8 @@
   transition: opacity 0.8s ease-in-out;
 
   z-index: 40;
+
+  overflow: visible;
 }
 
 @media screen and (max-width: 1400px) {
