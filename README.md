@@ -8,5 +8,29 @@ An AI Voice Assistant Promotional Website, Submission for The AI Odyssey organiz
 
 ---
 
+## To Run The App
+
+> Requires Nodejs and [yarn](https://yarnpkg.com/getting-started/install)
+
+- Install Dependencies
+
+```bash
+yarn
+```
+
+- Build The React App
+
+```bash
+yarn build
+```
+
+- Preview App
+
+```bash
+yarn preview
+```
+
+---
+
 Hiruka Chansilu  
 2023©
