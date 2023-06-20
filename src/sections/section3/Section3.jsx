@@ -20,7 +20,7 @@ export default function Section3() {
   const inView = usePageInView(sectionRef);
   const percentage = usePageScrollPercentage(gradientRef);
   const watchState = usePageInView(watchRef);
-  const echoPercentagePasses = usePageScrollPercentage(mediaRef, 30);
+  const echoPercentagePasses = usePageScrollPercentage(mediaRef, 26);
 
   const { changeTheme } = useContext(NavbarContext);
 
