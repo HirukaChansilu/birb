@@ -24,6 +24,10 @@ nav {
   transition: all 0.2s linear;
 }
 
+a {
+  color: unset;
+}
+
 .logo-c {
   font-family: "Raleway", sans-serif;
   font-size: 1.7rem;
@@ -40,7 +44,7 @@ nav img {
   margin-right: 0.5rem;
 }
 
-nav a {
+nav .shop {
   color: #fff;
   font-size: 1.1rem;
   font-weight: 400;
@@ -48,7 +52,7 @@ nav a {
   transition: all 0.2s linear;
 }
 
-nav a:hover {
+nav .shop:hover {
   color: #dddddd;
 }
 
@@ -58,11 +62,11 @@ nav a:hover {
 }
 
 .nav-light,
-.nav-light a {
+.nav-light .shop {
   color: #4b4b4b;
 }
 
-.nav-light a:hover {
+.nav-light .shop:hover {
   color: #7e7e7e;
 }
 

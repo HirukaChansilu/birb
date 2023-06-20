@@ -42,11 +42,15 @@ export default function Navbar() {
         top: hide ? "-3.5rem" : "0rem",
       }}
     >
-      <div className="logo-c">
-        <img src={logo} />
-        Birb
-      </div>
-      <a href="/shop">Shop</a>
+      <a href="/">
+        <div className="logo-c">
+          <img src={logo} />
+          Birb
+        </div>
+      </a>
+      <a className="shop" href="/shop">
+        Shop
+      </a>
     </nav>
   );
 }

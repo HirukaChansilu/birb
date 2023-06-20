@@ -58,7 +58,7 @@ export default function Section5() {
           <p>Control IOT Devices with ease. Minimal Size. Install Anywhere.</p>
           <div className="card-flex">
             <span>Rs. 12 500</span>
-            {/* TODO: LINK */}
+
             <a href="https://amazon.com/">Buy Now</a>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function Section5() {
           </p>
           <div className="card-flex">
             <span>Rs. 18 000</span>
-            {/* TODO: LINK */}
+
             <a href="https://amazon.com/">Buy Now</a>
           </div>
         </div>
@@ -86,11 +86,10 @@ export default function Section5() {
           <h3>Birb Home Pro</h3>
           <p>
             Loud Sounds. Dolby Atmos Technology. Control IOT Devices with ease.
-            Audio.
           </p>
           <div className="card-flex">
             <span>Rs. 25 000</span>
-            {/* TODO: LINK */}
+
             <a href="https://amazon.com/">Buy Now</a>
           </div>
         </div>
@@ -106,7 +105,7 @@ export default function Section5() {
           </p>
           <div className="card-flex">
             <span>Rs. 30 200</span>
-            {/* TODO: LINK */}
+
             <a href="https://amazon.com/">Buy Now</a>
           </div>
         </div>

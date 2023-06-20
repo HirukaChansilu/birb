@@ -1,4 +1,7 @@
 import { createContext, useMemo, useState } from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import Shop from "./routes/Shop";
 
 import Navbar from "./components/navbar/Navbar";
 import Landing from "./sections/landing/Landing";
@@ -16,19 +19,31 @@ function App() {
   const [theme, changeTheme] = useState("dark");
   const value = useMemo(() => ({ theme, changeTheme }), [theme]);
 
+  const router = createBrowserRouter([
+    { path: "/shop", element: <Shop /> },
+    {
+      path: "*",
+      element: (
+        <>
+          <Landing />
+          <Section2 />
+          <Section3 />
+          <Section4 />
+          <Section5 />
+          <Section6 />
+          <div className="footer-cropper">
+            <Section7 />
+            <Footer />
+          </div>
+        </>
+      ),
+    },
+  ]);
+
   return (
     <NavbarContext.Provider value={value}>
       <Navbar />
-      <Landing />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
-      <div className="footer-cropper">
-        <Section7 />
-        <Footer />
-      </div>
+      <RouterProvider router={router} />
     </NavbarContext.Provider>
   );
 }
