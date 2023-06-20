@@ -6,11 +6,11 @@ import Footer from "../components/footer/Footer";
 
 import "./shop.css";
 
-import birbNest from "./birbNest.png";
-import birbHome from "./birbHome.png";
-import birbPro from "./birbPro.png";
-import birbView from "./birbView.png";
-import accessories from "./accessories.png";
+import birbNest from "./birbNest.webp";
+import birbHome from "./birbHome.webp";
+import birbPro from "./birbPro.webp";
+import birbView from "./birbView.webp";
+import accessories from "./accessories.webp";
 
 export default function Shop() {
   const { changeTheme } = useContext(NavbarContext);
